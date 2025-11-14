@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Group Sync (Better Auth)",
+  "description": "Export, share and restore Chrome tab groups with Better Auth-backed sync.",
+  "version": "0.1.0",
+  "permissions": ["tabGroups", "tabs", "storage"],
+  "host_permissions": ["http://localhost:8788/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tab Group Sync"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Group Sync (Universal Key)",
+  "description": "Export, share and restore Chrome tab groups using a shared universal key.",
+  "version": "0.1.0",
+  "permissions": ["tabGroups", "tabs", "storage"],
+  "host_permissions": ["http://localhost:8787/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tab Group Sync"
+  }
+}

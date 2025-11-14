@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Group Sync</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tab Group Sync</h1>
+      <p class="subtitle">Better Auth storage</p>
+    </header>
+
+    <section class="card" id="auth-card">
+      <h2>Account</h2>
+      <div class="auth-form" id="auth-form">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+        </div>
+        <div class="actions">
+          <button id="sign-up" class="ghost">Create account</button>
+          <button id="sign-in" class="primary">Sign in</button>
+        </div>
+      </div>
+      <div class="auth-state hidden" id="auth-state">
+        <p id="signed-in-as"></p>
+        <button id="sign-out" class="danger">Sign out</button>
+      </div>
+    </section>
+
+    <section class="card" id="snapshot-card">
+      <h2>Create snapshot</h2>
+      <div class="field">
+        <label for="session-name">Session name</label>
+        <input id="session-name" type="text" placeholder="Focus tabs" />
+      </div>
+      <button id="capture" class="primary">Save current tab groups</button>
+    </section>
+
+    <section class="card">
+      <div class="header-row">
+        <h2>Saved sessions</h2>
+        <button id="refresh" class="ghost">Refresh</button>
+      </div>
+      <ul id="session-list" class="session-list"></ul>
+    </section>
+
+    <output id="status" aria-live="polite"></output>
+
+    <template id="session-item-template">
+      <li class="session-item">
+        <div class="session-meta">
+          <h3 class="session-name"></h3>
+          <p class="session-date"></p>
+        </div>
+        <div class="session-actions">
+          <button data-action="restore" class="primary">Restore</button>
+          <button data-action="rename" class="ghost">Rename</button>
+          <button data-action="delete" class="danger">Delete</button>
+        </div>
+      </li>
+    </template>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
