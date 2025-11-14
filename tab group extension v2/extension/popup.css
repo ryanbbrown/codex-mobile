@@ -1,0 +1,165 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --border: #dcdcdc;
+  --text: #1f2933;
+  --text-muted: #52606d;
+  --primary: #7c3aed;
+  --primary-text: #ffffff;
+  --danger: #dc2626;
+  --ghost: #334155;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 16px;
+  width: 360px;
+}
+
+header {
+  margin-bottom: 12px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.field input {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--primary);
+  color: var(--primary-text);
+}
+
+button.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--ghost);
+  border: 1px solid var(--border);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.auth-state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  gap: 12px;
+}
+
+.session-meta h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.session-meta p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.session-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#status {
+  display: block;
+  min-height: 18px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+

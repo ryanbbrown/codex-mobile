@@ -1,0 +1,10 @@
+node_modules/
+.env
+*.log
+*.sqlite
+.tabset
+.DS_Store
+
+# Better Auth backend artifacts
+/tab group extension v1/backend/storage.json
+/tab group extension v2/backend/data.sqlite

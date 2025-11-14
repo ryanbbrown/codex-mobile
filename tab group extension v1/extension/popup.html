@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Group Sync</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tab Group Sync</h1>
+      <p class="subtitle">Universal key storage</p>
+    </header>
+
+    <section class="card">
+      <h2>Universal key</h2>
+      <p class="hint">Choose a secret phrase and reuse it on every Chrome profile.</p>
+      <div class="field">
+        <label for="universal-key">Key</label>
+        <input id="universal-key" type="text" autocomplete="off" placeholder="e.g. starlit-meadow-83" />
+      </div>
+      <button id="save-key" class="primary">Save key</button>
+    </section>
+
+    <section class="card">
+      <h2>Create snapshot</h2>
+      <div class="field">
+        <label for="session-name">Session name</label>
+        <input id="session-name" type="text" placeholder="Morning research" />
+      </div>
+      <button id="capture" class="primary">Save current tab groups</button>
+    </section>
+
+    <section class="card">
+      <div class="header-row">
+        <h2>Saved sessions</h2>
+        <button id="refresh" class="ghost">Refresh</button>
+      </div>
+      <ul id="session-list" class="session-list"></ul>
+    </section>
+
+    <output id="status" aria-live="polite"></output>
+
+    <template id="session-item-template">
+      <li class="session-item">
+        <div class="session-meta">
+          <h3 class="session-name"></h3>
+          <p class="session-date"></p>
+        </div>
+        <div class="session-actions">
+          <button data-action="restore" class="primary">Restore</button>
+          <button data-action="rename" class="ghost">Rename</button>
+          <button data-action="delete" class="danger">Delete</button>
+        </div>
+      </li>
+    </template>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
